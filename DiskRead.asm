@@ -3,7 +3,7 @@ PROGRAM_SPACE equ 0x7e00 ; 0x7e00-0x7c00 is 512 bytes, so we are skipping over 1
 read_disk:
     mov ah,0x02 ; Setting the ah register to read the disk just like we set it to 0x0e to print something to screen
     mov bx,PROGRAM_SPACE
-    mov al,4 ; Number of sectors to be read
+    mov al,8 ; Number of sectors to be read
     mov dl,[Boot_disk]
     mov ch,0x00
     mov dh,0x00
